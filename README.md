@@ -56,9 +56,37 @@ If I was preparing for this kata, and understanding the redux flow, I would prov
     id: 4,
     name: 'Mike',
     favoriteFood: 'Roast Beef, Potatoes, Cooked Carrots'
+},{
+    id: 5,
+    name: 'Andrew',
+    favoriteFood: 'Burritos'
+}, {
+    id: 6,
+    name: 'Brad',
+    favoriteFood: 'Prime Rib'
 }]
 ```
 
 Once I have the data mocked out, I would then do my Test Driven Development (TDD) to build out the actions. Completing that, I would then TDD out my reducers. Finally, I would then create my presentational component using `withStyles` HOC pattern that `material-ui` suggests. 
 
 Finally, I would then use Redux's `connect` to create my container component and bring it into `<App />`
+
+## Tips for success
+Realize the Redux flow (`action` -> `reducer` -> `view`) is meant to provide highly predictable code during the SDLC. Be sure to follow best practices. Also be sure to understand the point of each item in the flow. 
+
+### Action
+Actions should provide actions and actions only, be them synchronous or asynchronous.
+
+### Reducer
+The reducers _reduce_ data. Make sure to know how to effectively manipulate data with es2015. I think it is pretty obvious that the data will be a list. Make sure to understand how to use the es2015 built-in functions on lists.
+
+### View
+The view presents the data. Make sure to know when to use stateless and stateful presentational views and how to use container components as detailed in the Redux best practices.
+
+### Style
+Style counts. Make sure you mini-app is clean. Please realize, style doesn't only mean what I see on the screen but how your code is submitted as well.
+
+### Tests
+In a professional setting you will have to write tests for your code. With all tests, there are diminishing returns. When the kata is release, I will detail the expected tests. I will not expect you to have to install any extra libraries for testing past what `create-react-app` includes bundled into the starter. You may however, add any library you are comfortable with and update the `package.json` as long as I can run `rpm run test` and see it test green.
+
+
