@@ -31,7 +31,7 @@ If you need to review any of these, here are their links. For the kata, you are 
 * [Material-UI Beta](https://material-ui-next.com/)
 	* [Table Component](https://material-ui-next.com/demos/tables/)
 
-Please note that using `create-react-app` does not provide `redux`, `axios`, nor `material-ui`, you will need to be able to install these libraries as well as any other ancillary libraries you wish.
+Please note that using `create-react-app` does not provide `redux`, `axios`, nor `material-ui`, you will need to be able to install these libraries as well as any other ancillary libraries.
 
 ### Ancillary Libraries
 You are free to use any combination of other supportive libraries you wish. 
