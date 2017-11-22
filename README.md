@@ -4,6 +4,15 @@ This kata is meant to allow you to prove your skill sets using ReactJs and the R
 ## Overview
 You will make a GET request on an API, have an option on how you wish to use the data, and display it in a Material-UI table. It is highly suggested you spend time before the kata working through this basic flow. Only 4 hours will be available for the kata, so learning while you perform is not really the best idea out there.
 
+## Expectations
+The following is the list of categories that we will use to determine our selection of candidates:
+
+*	Able to demonstrate React/Redux flow
+*	Able to communicate with the API via Axios
+*	Able to use Material-UI (beta version)
+*	Able to effectively manipulate data structures returned from API into ones usable for rendering views
+* 	Able to demonstrate adequate code coverage in unit and integration testing
+ 
 ## Before you come in to do the kata
 Make sure you can execute the following commands
 
@@ -90,3 +99,5 @@ Style counts. Make sure you mini-app is clean. Please realize, style doesn't onl
 In a professional setting you will have to write tests for your code. With all tests, there are diminishing returns. When the kata is release, I will detail the expected tests. I will not expect you to have to install any extra libraries for testing past what `create-react-app` includes bundled into the starter. You may however, add any library you are comfortable with and update the `package.json` as long as I can run `rpm run test` and see it test green.
 
 
+
+```
