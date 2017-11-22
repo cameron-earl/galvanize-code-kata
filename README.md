@@ -5,6 +5,9 @@ This kata is meant to allow you to prove your skill sets using ReactJs and the R
 You will make a GET request on an API, have an option on how you wish to use the data, and display it in a Material-UI table. It is highly suggested you spend time before the kata working through this basic flow. Only 4 hours will be available for the kata, so learning while you perform is not really the best idea out there.
 
 ## Expectations
+### Computer
+You are expected to supply your own development environment. This means bring a laptop ready to code.
+### Evaluation
 The following is the list of categories that we will use to determine our selection of candidates:
 
 *	Able to demonstrate React/Redux flow
