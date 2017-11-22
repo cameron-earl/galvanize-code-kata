@@ -37,7 +37,27 @@ Please note that using `create-react-app` does not provide `redux`, `axios`, nor
 You are free to use any combination of other supportive libraries you wish. 
 
 ## Preparing Suggestions
-If I was preparing for this kata, and understanding the redux flow, I would provide a mock for axios that supplied a list of data. Because axios expects json, you should also expect our api that you will access to provide json. Since we will be populating a table, you should also fully expect a list of javascript objects/hashes.
+If I was preparing for this kata, and understanding the redux flow, I would provide a mock for axios that supplied a list of data. Because axios expects json, you should also expect our api that you will access to provide json. Since we will be populating a table, you should also fully expect a list of javascript objects/hashes. An example may look like:
+
+```javascript
+[{
+    id: 1,
+    name: 'Anthony',
+    favoriteFood: 'Burritos'
+},{
+    id: 2,
+    name: 'Jeremy',
+    favoriteFood: 'Enchiladas'
+},{
+    id: 3,
+    name: 'Stephen',
+    favoriteFood: 'Prime Rib'
+},{
+    id: 4,
+    name: 'Mike',
+    favoriteFood: 'Roast Beef, Potatoes, Cooked Carrots'
+}]
+```
 
 Once I have the data mocked out, I would then do my Test Driven Development (TDD) to build out the actions. Completing that, I would then TDD out my reducers. Finally, I would then create my presentational component using `withStyles` HOC pattern that `material-ui` suggests. 
 
