@@ -13,9 +13,12 @@ class FishTableContainer extends Component {
 			...f,
 			weight: getWeight(f),
 		}))
-		const sortedFishArr = weightedFishArr.sort((a, b) => a.weight - b.weight)
-
-		return <FishTable fishArr={sortedFishArr} />
+		const sortedFishArr = weightedFishArr.sort((a, b) => b.weight - a.weight)
+		const finalFishArr = sortedFishArr.map(f => ({
+			...f,
+			weight: Math.floor(f.weight + 0.5), //rounding
+		}))
+		return <FishTable fishArr={finalFishArr.slice(0, 5)} />
 	}
 }
 
