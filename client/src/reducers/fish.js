@@ -4,7 +4,13 @@ import {
 	GET_FISH_FAILURE,
 } from '../actions/types'
 
-export default (state = [], action) => {
+const initialState = {
+	isLoading: true,
+	errorMsg: false,
+	fish: [],
+}
+
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case GET_FISH_PENDING:
 			return { ...state, isLoading: true, errorMsg: false }

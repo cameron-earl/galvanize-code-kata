@@ -1,23 +1,17 @@
 import { connect } from 'react-redux'
-import { getAllFish } from '../actions'
 import FishTable from '../components/FishTable'
+import React, { Component } from 'react'
+
+class FishTableContainer extends Component {
+	render = () => (
+		<FishTable fishArr={this.props.fishArr} species={this.props.species} />
+	)
+}
 
 const mapStateToProps = state => {
 	return {
-		fish: state.fish,
+		fishArr: state.fish.fish,
 	}
 }
 
-const mapDispatchToProps = dispatch => {
-	return {
-		getAllFish: () => {
-			dispatch(getAllFish())
-		},
-	}
-}
-
-const FishTableContainer = connect(mapStateToProps, mapDispatchToProps)(
-	FishTable,
-)
-
-export default FishTableContainer
+export default connect(mapStateToProps, null)(FishTableContainer)

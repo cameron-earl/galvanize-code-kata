@@ -1,18 +1,23 @@
-import React from 'react'
-// import MainView from './components/MainView'
+import React, { Component } from 'react'
+import FishTableContainer from './containers/FishTableContainer'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from './actions'
 
-function App({ fish, getAllFish }) {
-	getAllFish()
+class App extends Component {
+	componentDidMount() {
+		this.props.getAllFish()
+	}
 
-	return (
-		<div className="App">
-			<h1>Fish Tournament</h1>
-			{JSON.stringify(fish)}
-		</div>
-	)
+	render = () => {
+		const species = 'blue'
+		return (
+			<div className="App">
+				<h1>Fish Tournament</h1>
+				<FishTableContainer species={species} />
+			</div>
+		)
+	}
 }
 
 const mapStateToProps = state => ({
