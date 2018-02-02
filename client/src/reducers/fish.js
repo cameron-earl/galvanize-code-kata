@@ -23,6 +23,25 @@ export default (state = initialState, action) => {
 				errorMsg: action.errorMsg,
 			}
 		case GET_FISH_SUCCESS:
+
+		/**
+			Overall, its a solid approach but a naive approach. Since you have an hour left,
+			go ahead and branch off and see if you can get this with a "more solid" technique.
+
+			let resultObject = {};
+
+			const fishes = allFish.map(() => {
+				map to proper format (eg weight)
+			})).reduce((result, nextFish) => {
+				reduce from a list to a object, grouped by species
+			}, resultObject);
+
+
+			const nextState = {
+				...state,
+				{...fishes}
+			}
+		*/
 			const getWeight = ({ length, girth }) => length * girth * girth / 800
 			const weightedFishArr = action.fishArr.map(f => ({
 				...f,
@@ -31,6 +50,8 @@ export default (state = initialState, action) => {
 			const sortedFishArr = weightedFishArr.sort((a, b) => b.weight - a.weight)
 			const finalFishArr = sortedFishArr.map(f => ({
 				...f,
+
+				//techinical, but coerce to int
 				weight: Math.floor(f.weight + 0.5), //rounding
 			}))
 
