@@ -13,7 +13,7 @@ export const getAllFish = () => {
 		dispatch({ type: GET_FISH_PENDING })
 		try {
 			const response = await axios.get(url)
-			dispatch({ type: GET_FISH_SUCCESS, fish: response.data })
+			dispatch({ type: GET_FISH_SUCCESS, fishArr: response.data })
 		} catch (error) {
 			let errorMsg = "Couldn't get fish from API"
 			dispatch({ type: GET_FISH_FAILURE, errorMsg: errorMsg })

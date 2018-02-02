@@ -3,6 +3,7 @@ import FishTableContainer from './containers/FishTableContainer'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from './actions'
+import './App.css'
 
 class App extends Component {
 	componentDidMount() {
