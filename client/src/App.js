@@ -10,11 +10,19 @@ class App extends Component {
 	}
 
 	render = () => {
-		const species = 'blue'
+		const species = ['blue', 'flathead', 'channel']
+		const capitalize = str => str[0].toUpperCase() + str.slice(1)
+
+		let tables = species.map((s, i) => (
+			<div key={i}>
+				<h3>{capitalize(s)} Catfish</h3>
+				<FishTableContainer species={s} />
+			</div>
+		))
 		return (
 			<div className="App">
 				<h1>Fish Tournament</h1>
-				<FishTableContainer species={species} />
+				{tables}
 			</div>
 		)
 	}
